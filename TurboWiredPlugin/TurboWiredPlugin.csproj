@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Commandlineparameters></Commandlineparameters>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Turbo.Main" />
+    <None Remove="Turbo.Core" />
+    <None Remove="Turbo.Packets" />
+    <None Remove="Turbo.Rooms" />
+    <None Remove="Turbo.Database" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Turbo.Core">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Database">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Events">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Furniture">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Furniture.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Main">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Main.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Packets">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Packets.dll</HintPath>
+    </Reference>
+    <Reference Include="Turbo.Rooms">
+      <HintPath>..\..\turbo\Turbo\bin\Debug\net8.0\Turbo.Rooms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
